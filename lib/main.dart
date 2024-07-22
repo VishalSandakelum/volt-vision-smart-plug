@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:voltvision_smartplug/screens/AddManuallyPage.dart';
 import 'package:voltvision_smartplug/screens/HomePage.dart';
+import 'package:voltvision_smartplug/screens/SingleDevicePage.dart';
 import 'screens/PermissionPage.dart';
 import 'screens/StartedPage.dart';
 
@@ -19,7 +20,8 @@ class VoltVision extends StatelessWidget{
     return MaterialApp(
       //home: StartedPage(),
       //home: Homepage(),
-      home: Addmanuallypage(),
+      //home: Addmanuallypage(),
+      home: Singledevicepage(device: 'WIFI',),
     );
   }
 }

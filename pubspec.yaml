@@ -39,5 +39,7 @@ flutter:
     - assets/permissionpage/
     - assets/homepage/
     - assets/devicemanuallyaddpage/
+    - assets/adddevicepage/
+    - assets/singledevicepage/
   uses-material-design: true
 
