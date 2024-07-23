@@ -5,6 +5,8 @@ import 'package:voltvision_smartplug/components/Device.dart';
 import 'package:voltvision_smartplug/components/DevicePageHeader.dart';
 import 'package:voltvision_smartplug/components/Socket.dart';
 
+import '../components/LiveMonitoringChart.dart';
+
 /**
  * @author: Vishal Sandakelum,
  * @Runtime version: 11.0.11+9-b1341.60 amd64
@@ -142,6 +144,27 @@ class _SingledevicepageState extends State<Singledevicepage> {
                       ],
                     ),
                   ),
+
+                  Container(
+                      child: Column(
+                        children: [
+                          Container(
+                              height: screenHeight*0.35,
+                              child: Livemonitoringchart()
+                          ),
+
+                          Text("Time (s)",
+                            style: GoogleFonts.inter(
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17,
+                                  color: Color(0xFFFFFFFF),
+                                )),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                  )
                 ],
               ),
             ],
