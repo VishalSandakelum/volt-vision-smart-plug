@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 /**
  * @author: Vishal Sandakelum,
@@ -49,6 +50,7 @@ class Devicepageheader extends StatelessWidget{
               GestureDetector(
                 onTap: () {
                   print("Image tapped");
+                  sendGetRequest();
                 },
                 child: Container(
                   child: Image.asset(imagePath),
@@ -63,4 +65,18 @@ class Devicepageheader extends StatelessWidget{
     );
   }
 
+}
+
+Future<void> sendGetRequest() async {
+  final url = 'http://192.168.198.104/';
+  try {
+    final response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      print('Request successful: ${response.body}');
+    } else {
+      print('Request failed with status: ${response.statusCode}');
+    }
+  } catch (e) {
+    print('Error occurred: $e');
+  }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:voltvision_smartplug/components/AiSuggesion.dart';
 import 'package:voltvision_smartplug/components/Device.dart';
 import 'package:voltvision_smartplug/components/DevicePageHeader.dart';
 import 'package:voltvision_smartplug/components/Socket.dart';
@@ -146,25 +147,53 @@ class _SingledevicepageState extends State<Singledevicepage> {
                   ),
 
                   Container(
-                      child: Column(
+                    //color: Colors.red,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                              height: screenHeight*0.35,
+                              height: screenHeight*0.42,
+                              width: screenWidth*0.83,
                               child: Livemonitoringchart()
-                          ),
-
-                          Text("Time (s)",
-                            style: GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 17,
-                                  color: Color(0xFFFFFFFF),
-                                )),
-                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
-                  )
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.only(top: screenHeight*0.02),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text("Today total usage -",
+                              style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,
+                                    color: Color(0xFFFFFFFF),
+                                  )),
+                            ),
+
+                            SizedBox(width: screenWidth*0.02,),
+
+                            Text("1420 kWh",
+                              style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,
+                                    color: Color(0xFFFFFFFF),
+                                  )),
+                            ),
+                          ],
+                        ),
+
+                        SizedBox(height: screenHeight*0.02,),
+
+                        Aisuggesion(),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ],

@@ -28,13 +28,18 @@ class _LivemonitoringchartState extends State<Livemonitoringchart> {
       child: Scaffold(
         backgroundColor: Color(0xFF232323),
         body: SfCartesianChart(
+          plotAreaBorderWidth: 0, // Remove the plot area border lines
           backgroundColor: Color(0xFF232323),
-          title: ChartTitle(text: 'Live Monitoring',textStyle: GoogleFonts.inter(
+          title: ChartTitle(
+            text: 'Live Monitoring',
+            textStyle: GoogleFonts.inter(
               textStyle: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 17,
                 color: Color(0xFFFFFFFF),
-              ))),
+              ),
+            ),
+          ),
           series: <LineSeries<LiveData, int>>[
             LineSeries<LiveData, int>(
               onRendererCreated: (ChartSeriesController controller) {
@@ -48,25 +53,36 @@ class _LivemonitoringchartState extends State<Livemonitoringchart> {
           ],
           primaryXAxis: NumericAxis(
             majorGridLines: const MajorGridLines(width: 0),
+            majorTickLines: const MajorTickLines(size: 0),
             edgeLabelPlacement: EdgeLabelPlacement.shift,
             interval: 3,
-            title: AxisTitle(text: 'Time (s)',textStyle: TextStyle(
-              color: Color(0xFFFFFFFF),
-            )),
-            axisLine: const AxisLine(width: 1, color: Color(0xFFFFFFFF)),
-            labelStyle: const TextStyle(color: Color(0xFFFFFFFF)),
-            isVisible: false,
-          ),
-          primaryYAxis: NumericAxis(
-            axisLine: const AxisLine(width: 1, color: Color(0xFFFFFFFF)),
-            majorTickLines: const MajorTickLines(size: 0),
-            majorGridLines: const MajorGridLines(width: 1, color: Colors.grey),
-            title: AxisTitle(text: 'Power (W)' ,textStyle: GoogleFonts.inter(
+            title: AxisTitle(
+              text: 'Time (s)',
+              textStyle: GoogleFonts.inter(
                 textStyle: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 17,
                   color: Color(0xFFFFFFFF),
-                ))),
+                ),
+              ),
+            ),
+            axisLine: const AxisLine(width: 1, color: Color(0xFFFFFFFF)),
+            labelStyle: const TextStyle(color: Colors.transparent),
+          ),
+          primaryYAxis: NumericAxis(
+            axisLine: const AxisLine(width: 1, color: Color(0xFFFFFFFF)),
+            majorTickLines: const MajorTickLines(size: 0),
+            majorGridLines: const MajorGridLines(width: 0, color: Colors.grey),
+            title: AxisTitle(
+              text: 'Power (W)',
+              textStyle: GoogleFonts.inter(
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 17,
+                  color: Color(0xFFFFFFFF),
+                ),
+              ),
+            ),
             labelStyle: const TextStyle(color: Colors.transparent),
           ),
         ),
@@ -79,7 +95,9 @@ class _LivemonitoringchartState extends State<Livemonitoringchart> {
     chartData.add(LiveData(time++, (math.Random().nextInt(60) + 30)));
     chartData.removeAt(0);
     _chartSeriesController.updateDataSource(
-        addedDataIndex: chartData.length - 1, removedDataIndex: 0);
+      addedDataIndex: chartData.length - 1,
+      removedDataIndex: 0,
+    );
   }
 
   List<LiveData> getChartData() {
@@ -102,7 +120,7 @@ class _LivemonitoringchartState extends State<Livemonitoringchart> {
       LiveData(15, 42),
       LiveData(16, 46),
       LiveData(17, 52),
-      LiveData(18, 44)
+      LiveData(18, 44),
     ];
   }
 }
