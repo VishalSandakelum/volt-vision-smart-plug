@@ -11,9 +11,9 @@ Welcome to the Smart Plug Project! This project aims to revolutionize home autom
 - Gas Leak Detection: Identify gas leaks and automatically turn off devices in the affected area through the smart plug.
 - Cost Tracking: Calculate your monthly electricity bill based on device usage.
 - AI-Powered Insights:
-        Provide daily usage data for each device.
-        Analyze data to identify the most power-hungry devices.
-        Offer suggestions to save electricity, such as optimal times to turn off specific devices.
+        * Provide daily usage data for each device.
+        * Analyze data to identify the most power-hungry devices.
+        * Offer suggestions to save electricity, such as optimal times to turn off specific devices.
 
 
 ### Frontend
@@ -26,9 +26,9 @@ Welcome to the Smart Plug Project! This project aims to revolutionize home autom
     ✅ C++
 
 <img src="screenimage/getstartedpage.png">
-<img src="screenimage/permissionpage.png.png">
-<img src="screenimage/homepage.png.png">
-<img src="screenimage/devicemanuallyaddpage.png.png">
-<img src="screenimage/livemonitoringpage.png.png">
+<img src="screenimage/permissionpage.png">
+<img src="screenimage/homepage.png">
+<img src="screenimage/devicemanuallyaddpage.png">
+<img src="screenimage/livemonitoringpage.png">
 
 <img src="screenimage/voltvisionsmartplug.png">
