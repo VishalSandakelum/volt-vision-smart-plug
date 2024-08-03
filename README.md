@@ -1,16 +1,34 @@
-# voltvision_smartplug
+# VoltVision Smart Plug Project
 
-A new Flutter project.
+Welcome to the Smart Plug Project! This project aims to revolutionize home automation by providing a smart plug that allows you to manage and monitor all your home devices efficiently through our mobile application.
 
-## Getting Started
+## Key Features
 
-This project is a starting point for a Flutter application.
+- Device Management: Seamlessly manage all devices in your home through our smart plug.
+- Live Monitoring: Check real-time current usage of each connected device via the mobile app.
+                   Safety Alerts:
+- Current Mismatches: Automatically shut off the smart plug to prevent electrical hazards when a mismatch is detected.
+- Gas Leak Detection: Identify gas leaks and automatically turn off devices in the affected area through the smart plug.
+- Cost Tracking: Calculate your monthly electricity bill based on device usage.
+- AI-Powered Insights:
+        Provide daily usage data for each device.
+        Analyze data to identify the most power-hungry devices.
+        Offer suggestions to save electricity, such as optimal times to turn off specific devices.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Frontend
+    ✅ Flutter ✅ Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### BackEnd
+    ✅ Django
+
+### Arduino
+    ✅ C++
+
+<img src="screenimage/getstartedpage.png">
+<img src="screenimage/permissionpage.png.png">
+<img src="screenimage/homepage.png.png">
+<img src="screenimage/devicemanuallyaddpage.png.png">
+<img src="screenimage/livemonitoringpage.png.png">
+
+<img src="screenimage/voltvisionsmartplug.png">
