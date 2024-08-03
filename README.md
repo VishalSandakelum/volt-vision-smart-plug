@@ -10,10 +10,10 @@ Welcome to the Smart Plug Project! This project aims to revolutionize home autom
 - Current Mismatches: Automatically shut off the smart plug to prevent electrical hazards when a mismatch is detected.
 - Gas Leak Detection: Identify gas leaks and automatically turn off devices in the affected area through the smart plug.
 - Cost Tracking: Calculate your monthly electricity bill based on device usage.
-- AI-Powered Insights: `/n` 
-        Provide daily usage data for each device.
-        * Analyze data to identify the most power-hungry devices.
-        * Offer suggestions to save electricity, such as optimal times to turn off specific devices.
+- AI-Powered Insights: 
+        `Provide daily usage data for each device.`
+        `Analyze data to identify the most power-hungry devices.`
+        `Offer suggestions to save electricity, such as optimal times to turn off specific devices.`
 
 
 ### Frontend
